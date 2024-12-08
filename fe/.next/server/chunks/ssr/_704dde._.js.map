@@ -1,0 +1,11 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 26, "column": 0}, "map": {"version":3,"sources":["file:///Users/morningyogidays/Documents/GitHub/yogiCommerce/fe/src/app/component/header.tsx"],"sourcesContent":["import React from 'react';\nimport Image from \"next/image\";\nimport Logo from '@/assets/images/logo2.svg'\nconst Header = () => {\n    return (\n        <div className='bg-[#FFFFFF] shadow'>\n            <nav className=\"container mx-auto flex items-center justify-center py-4 px-6\">\n            <Image width={100} src={Logo} alt=\"logo\" className=\"ml-2 my-auto\" />\n            </nav>\n        </div>\n\n   );\n};\n\nexport default Header;\n"],"names":[],"mappings":";;;;AACA;;;;;;;;;AAEA,MAAM,SAAS;IACX,qBACI,8OAAC;QAAI,WAAU;kBACX,cAAA,8OAAC;YAAI,WAAU;sBACf,cAAA,8OAAC,6HAAA,CAAA,UAAK;gBAAC,OAAO;gBAAK,KAAK;gBAAM,KAAI;gBAAO,WAAU;;;;;;;;;;;;;;;;AAK/D;uCAEe"}},
+    {"offset": {"line": 66, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 72, "column": 0}, "map": {"version":3,"sources":["file:///Users/morningyogidays/Documents/GitHub/yogiCommerce/fe/src/app/home/page.tsx"],"sourcesContent":["import React from 'react';\nimport Header from '../component/header';\n\nconst Home = () => {\n  return (\n    <Header></Header>\n  );\n};\n\nexport default Home;\n"],"names":[],"mappings":";;;;AACA;;;AAEA,MAAM,OAAO;IACX,qBACE,8OAAC,kIAAA,CAAA,UAAM;;;;;AAEX;uCAEe"}},
+    {"offset": {"line": 87, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 98, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 98, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
