@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <Header />
-        <main className=" justify-center items-center max-w-[1000px] mx-auto">{children}</main>
+        <main className=" justify-center items-center mx-5 lg:max-w-[1000px] lg:mx-auto mb-20">{children}</main>
         <Footer />
       </body>
     </html>
