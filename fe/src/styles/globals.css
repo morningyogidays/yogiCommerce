@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font faces */
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url("../assets/notosansthai/NotoSansThai-Medium.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  src: url("../assets/notosansthai/NotoSansThai-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+}
+
+/* Root color scheme */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #171717;
+    --foreground: #ffffff;
+  }
+}
+
+/* Base styles */
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+/* Tailwind font size utilities */
+@layer base {
+  .font-xs {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+
+  .font-sm {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  .font-md {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+
+  .font-lg {
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 500;
+  }
+
+  .font-xl {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 500;
+  }
+
+  /* Regular font weight */
+  .font-xs-regular {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+  }
+
+  .font-sm-regular {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .text-light {
+    color: var(--foreground);
+  }
+
+  .text-dark {
+    color: var(--background);
+  }
+  
+  .dark .text-light {
+    color: var(--background);
+  }
+
+  .dark .text-dark {
+    color: var(--foreground);
+  }
+}
