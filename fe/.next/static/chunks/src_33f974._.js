@@ -271,6 +271,7 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 ;
 const Products = ()=>{
+    // const router = useRouter(); // ใช้ useRouter เพื่อทำการเปลี่ยนหน้า
     const products = [
         {
             id: 1,
@@ -321,12 +322,16 @@ const Products = ()=>{
             img: "https://via.placeholder.com/300x200"
         }
     ];
+    // const handleClick = (id: number) => {
+    //   router.push(`/home/${id}`);
+    // };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex justify-center",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6",
             children: products.map((product)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "bg-white border w-[164px] md:w-[234px] h-[287px] md:h-[356px] border-[#D9D9D9] overflow-hidden",
+                    // onClick={() => handleClick(product.id)}
+                    className: "bg-white border w-[164px] md:w-[234px] h-[287px] md:h-[356px] border-[#D9D9D9] overflow-hidden cursor-pointer",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                             src: product.img,
@@ -334,48 +339,48 @@ const Products = ()=>{
                             className: "w-full h-[165px] md:h-[234px] object-cover"
                         }, void 0, false, {
                             fileName: "[project]/src/app/component/products.tsx",
-                            lineNumber: 23,
+                            lineNumber: 32,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "p-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: " text-black font-xs-regular mb-2",
+                                    className: "text-black font-xs-regular mb-2",
                                     children: product.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/component/products.tsx",
-                                    lineNumber: 29,
+                                    lineNumber: 38,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: " text-black font-s",
+                                    className: "text-black font-s",
                                     children: product.price
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/component/products.tsx",
-                                    lineNumber: 30,
+                                    lineNumber: 39,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/component/products.tsx",
-                            lineNumber: 28,
+                            lineNumber: 37,
                             columnNumber: 13
                         }, this)
                     ]
                 }, product.id, true, {
                     fileName: "[project]/src/app/component/products.tsx",
-                    lineNumber: 19,
+                    lineNumber: 27,
                     columnNumber: 11
                 }, this))
         }, void 0, false, {
             fileName: "[project]/src/app/component/products.tsx",
-            lineNumber: 17,
+            lineNumber: 25,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/component/products.tsx",
-        lineNumber: 16,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 };

@@ -13,9 +13,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>OnlineShop</title>
       </head>
-      <body>
+      <body className="flex flex-col min-h-screen">
         <Header />
-        <main className=" justify-center items-center mx-5 lg:max-w-[1000px] lg:mx-auto mb-20">{children}</main>
+        <main className="flex-grow justify-center items-center mx-5 lg:max-w-[1000px] lg:mx-auto mb-20">{children}</main>
         <Footer />
       </body>
     </html>
