@@ -5,15 +5,14 @@ import Image from "next/image";
 import Detail from '@/assets/images/detail1.svg';
 import Edit from '@/assets/icons/edit.svg';
 
-const DetailProduct = () => {
+const DetailProduct =  ({ params }: { params: { id: string } }) => {
   const searchParams = useSearchParams();
-  console.log(searchParams);
-  
   const name = searchParams.get('name');
   const router = useRouter();
+  const id = params.id; 
+  
 
   const handleEdit = () => {
-    const id = searchParams.get('id'); 
     if (!id) {
       console.error("No ID found in the URL");
       return;
