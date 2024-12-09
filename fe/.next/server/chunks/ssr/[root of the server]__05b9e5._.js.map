@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 31, "column": 0}, "map": {"version":3,"sources":["file:///Users/morningyogidays/Documents/GitHub/yogiCommerce/fe/src/app/page.tsx"],"sourcesContent":["import Head from \"next/head\";\nimport React,{ useEffect, useState } from \"react\";\nimport { useRouter } from \"next/router\";\n\nexport default function Home() {\n    const router = useRouter();\n\n   useEffect(() => {\n    if (router.pathname === \"/\" && !router.pathname.includes(\"/home\")) {\n      router.push(\"/home\");\n    }\n  }, [router.pathname]);\n  return (\n    <>\n      <Head>\n        <link\n          href=\"@/assets/icons/logo.svg\"\n          rel=\"icon\" type=\"image/x-icon\"/>\n\n        <title>OnlineShop</title>\n      </Head>\n      <section>\n\n      </section>\n    </>\n  );\n}\n\n"],"names":[],"mappings":";;;;AAAA;AACA;AACA;;;;;AAEe,SAAS;IACpB,MAAM,SAAS,CAAA,GAAA,8HAAA,CAAA,YAAS,AAAD;IAExB,CAAA,GAAA,qMAAA,CAAA,YAAS,AAAD,EAAE;QACT,IAAI,OAAO,QAAQ,KAAK,OAAO,CAAC,OAAO,QAAQ,CAAC,QAAQ,CAAC,UAAU;YACjE,OAAO,IAAI,CAAC;QACd;IACF,GAAG;QAAC,OAAO,QAAQ;KAAC;IACpB,qBACE;;0BACE,8OAAC,oKAAA,CAAA,UAAI;;kCACH,8OAAC;wBACC,MAAK;wBACL,KAAI;wBAAO,MAAK;;;;;;kCAElB,8OAAC;kCAAM;;;;;;;;;;;;0BAET,8OAAC;;;;;;;AAKP"}},
+    {"offset": {"line": 85, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 96, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 96, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
