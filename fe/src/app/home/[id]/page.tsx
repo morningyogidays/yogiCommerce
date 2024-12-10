@@ -1,11 +1,10 @@
 "use client";
 
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams, useParams } from 'next/navigation';
 import Image from "next/image";
 import Edit from '@/assets/icons/edit.svg';
+import Detail from "@/assets/images/detail1.svg"
 import { useEffect, useRef, useState } from 'react';
-// import Detail from "@/assets/images/detail1.svg"
-// import products from '@/app/component/products';
 import { NextPage } from 'next';
 import React from 'react';
 
@@ -20,29 +19,34 @@ interface productType {
 }
 
 interface Props{
-  products: productType[]
-  params: { id: string };
 }
 
-const DetailProduct:NextPage<Props> =  ({products, params})=> {
-  const [product, setProduct] = useState<productType | null>(null);
+const DetailProduct:NextPage<Props> =  ()=> {
   const productRef = useRef<productType | null>(null); 
+  const [product, setProduct] = useState<productType | null>(null);
   const router = useRouter();
-  const id = params?.id;
+  const { id } = useParams();
+  const products: productType[] = [
+    { _id: "1", name: "Men's Plain Derby Semi Casual Shoes", price: 6500, img: Detail, quantity: 1, describe: "More than perhaps any other silhouette, the Air More Uptempo encapsulates '90s basketball flavour at its finest." },
+    { _id: "2", name: "Men’s Sports Walking Shoes", price: 6500, img: Detail, quantity: 1, describe: "More than perhaps any other silhouette, the Air More Uptempo encapsulates '90s basketball flavour at its finest." },
+    { _id: "3", name: "Men's Cosk Walking,Gym Shoes", price: 6500, img: Detail, quantity: 1, describe: "More than perhaps any other silhouette, the Air More Uptempo encapsulates '90s basketball flavour at its finest." },
+    { _id: "4", name: "Men'sports Walking & Gym Shoes", price: 6500, img: Detail, quantity: 1, describe: "More than perhaps any other silhouette, the Air More Uptempo encapsulates '90s basketball flavour at its finest." },
+    { _id: "5", name: "Men's OXYFIT (N) Walking Shoe", price: 6500, img: Detail, quantity: 1, describe: "More than perhaps any other silhouette, the Air More Uptempo encapsulates '90s basketball flavour at its finest." },
+    { _id: "6", name: "Men's 3392 Stylish Casual Shoes", price: 6500, img: Detail, quantity: 1, describe: "More than perhaps any other silhouette, the Air More Uptempo encapsulates '90s basketball flavour at its finest." },
+    { _id: "7", name: "Men's Milan Best Running Shoes", price: 6500, img: Detail, quantity: 1, describe: "More than perhaps any other silhouette, the Air More Uptempo encapsulates '90s basketball flavour at its finest." },
+    { _id: "8", name: "Men's Creta-12 Men's Running Shoes", price: 6500, img: Detail, quantity: 1, describe: "More than perhaps any other silhouette, the Air More Uptempo encapsulates '90s basketball flavour at its finest." },
+  ];
 
   useEffect(() => {
-    if (!id) {
-      alert("ID not found in params!");
-      return;
+    if (products && Array.isArray(products)) {
+      const foundProduct = products.find((prod) => prod._id === id);
+      if (foundProduct) {
+        setProduct(foundProduct);
+      } else {
+        console.error("Product not found");
+      }
     }
-
-    const foundProduct = products.find((prod) => prod._id === id);
-    if (foundProduct) {
-      setProduct(foundProduct);
-    } else {
-      alert("Product not found!");
-    }
-  }, [id, products]);
+  }, [products, id]);
 
   const handleEdit = () => {
     if (!product?._id) {
