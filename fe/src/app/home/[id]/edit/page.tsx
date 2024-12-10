@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import Upload from '@/assets/icons/upload.svg';
+import React from "react";
 
 const EditProduct = () => {
   const searchParams = useSearchParams();

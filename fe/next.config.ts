@@ -11,7 +11,6 @@ const nextConfig: NextConfig = {
     return config;
   },
   experimental: {
-    // turbopack: false,
   },
   async rewrites() {
     return [

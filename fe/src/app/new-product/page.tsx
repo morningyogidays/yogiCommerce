@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Upload from "@/assets/icons/upload.svg";
+import React from "react";
 
 const NewProduct = () => {
   const [formData, setFormData] = useState({

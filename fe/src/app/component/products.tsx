@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
 import Image from "next/image";
 import Detail from "@/assets/images/detail1.svg"
+import React from 'react';
 
 interface productType{
   _id: string;

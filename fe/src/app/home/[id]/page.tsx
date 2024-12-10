@@ -4,9 +4,10 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Image from "next/image";
 import Edit from '@/assets/icons/edit.svg';
 import { useEffect, useRef, useState } from 'react';
-import Detail from "@/assets/images/detail1.svg"
-import products from '@/app/component/products';
+// import Detail from "@/assets/images/detail1.svg"
+// import products from '@/app/component/products';
 import { NextPage } from 'next';
+import React from 'react';
 
 interface productType {
   _id: string;

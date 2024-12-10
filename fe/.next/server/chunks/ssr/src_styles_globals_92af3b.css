@@ -365,28 +365,16 @@ img, video {
   position: relative;
 }
 
+.bottom-20 {
+  bottom: 5rem;
+}
+
 .bottom-4 {
   bottom: 1rem;
 }
 
 .left-1\/2 {
   left: 50%;
-}
-
-.bottom-5 {
-  bottom: 1.25rem;
-}
-
-.right-5 {
-  right: 1.25rem;
-}
-
-.bottom-10 {
-  bottom: 2.5rem;
-}
-
-.bottom-20 {
-  bottom: 5rem;
 }
 
 .right-10 {
@@ -484,6 +472,10 @@ img, video {
   height: 1rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-\[165px\] {
   height: 165px;
 }
@@ -506,14 +498,6 @@ img, video {
 
 .h-\[64px\] {
   height: 64px;
-}
-
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-7 {
-  height: 1.75rem;
 }
 
 .min-h-screen {
@@ -540,6 +524,10 @@ img, video {
   width: 1rem;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .w-\[164px\] {
   width: 164px;
 }
@@ -558,14 +546,6 @@ img, video {
 
 .w-full {
   width: 100%;
-}
-
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-7 {
-  width: 1.75rem;
 }
 
 .max-w-\[480px\] {
@@ -686,15 +666,6 @@ img, video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
-}
-
-.fill-white {
-  fill: #fff;
-}
-
 .object-cover {
   object-fit: cover;
 }
@@ -767,14 +738,14 @@ img, video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
   transition-duration: .15s;
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
   transition-duration: .15s;
 }
@@ -830,11 +801,6 @@ body {
 
 .hover\:bg-\[\#fc531b63\]:hover {
   background-color: #fc531b63;
-}
-
-.hover\:bg-blue-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 165 250 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-gray-300:hover {
