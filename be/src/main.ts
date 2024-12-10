@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe, Logger } from '@nestjs/common';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { join } from 'path';
 
 async function bootstrap() {
   try {
@@ -16,8 +17,10 @@ async function bootstrap() {
     );
 
     app.setGlobalPrefix('api/v1');
+
+    const corsOrigin = process.env.CORS_ORIGIN || '*';
     app.enableCors({
-      origin: process.env.CORS_ORIGIN || '*',
+      origin: corsOrigin,
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
       credentials: true,
     });
@@ -31,12 +34,16 @@ async function bootstrap() {
 
     const swaggerDocument = SwaggerModule.createDocument(app, swaggerConfig);
     SwaggerModule.setup('swagger', app, swaggerDocument);
-
+    
     const port = Number(process.env.PORT) || 3000;
     await app.listen(port);
-    Logger.log(`Server running on: ${await app.getUrl()}`, 'Bootstrap');
+
+    Logger.log(
+      `Server running on: http://localhost:${port}/api/v1`,
+      'Bootstrap',
+    );
   } catch (error) {
-    Logger.error('Error starting the application', error, 'Bootstrap');
+    Logger.error('Error starting the application', error.stack, 'Bootstrap');
     process.exit(1);
   }
 }

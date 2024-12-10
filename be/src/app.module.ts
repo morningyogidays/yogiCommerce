@@ -5,7 +5,9 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ProductModule } from './product/product.module';
-// import { DashboardBannerModule } from './dashboard-banner/dashboard-banner.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
+import { UploadModule } from './upload/upload.module';
 
 @Module({
   imports: [
@@ -15,7 +17,10 @@ import { ProductModule } from './product/product.module';
     }),
     MongooseModule.forRootAsync(mongooseFactory),
     ProductModule,
-    // DashboardBannerModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+    }),
+    UploadModule,
   ],
   controllers: [AppController],
   providers: [AppService],

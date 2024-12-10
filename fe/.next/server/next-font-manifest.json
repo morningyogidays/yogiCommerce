@@ -1,6 +1,10 @@
 {
   "app": {
-    "[project]/src/app/home/page": []
+    "[project]/src/app/home/page": [],
+    "[project]/src/app/_not-found/page": [],
+    "[project]/src/app/new-product/page": [],
+    "[project]/src/app/page": [],
+    "[project]/src/app/home/[id]/page": []
   },
   "appUsingSizeAdjust": false,
   "pages": {},

@@ -5,5 +5,5 @@ export interface Product extends Document {
   readonly price: number;
   readonly quantity: number;
   readonly describe: string;
-  readonly img: string;
+  img: string;
 }
