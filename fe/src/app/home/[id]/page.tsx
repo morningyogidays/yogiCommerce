@@ -4,6 +4,9 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Image from "next/image";
 import Edit from '@/assets/icons/edit.svg';
 import { useEffect, useRef, useState } from 'react';
+import Detail from "@/assets/images/detail1.svg"
+import products from '@/app/component/products';
+import { NextPage } from 'next';
 
 interface productType {
   _id: string;
@@ -12,29 +15,40 @@ interface productType {
   price: number;
   quantity: number;
   img: string;
-  __v: number;
+  // __v: number;
 }
 
-const DetailProduct =  () => {
+interface Props{
+  products: productType[]
+  params: { id: string };
+}
+
+const DetailProduct:NextPage<Props> =  ({products, params})=> {
   const [product, setProduct] = useState<productType | null>(null);
   const productRef = useRef<productType | null>(null); 
   const router = useRouter();
+  const id = params?.id;
 
-  
   useEffect(() => {
-    if (productRef.current) {
-      setProduct(productRef.current); 
-    } else {
-      router.push("/"); 
-    }
-  }, [router]);
-
-  const handleEdit = () => {
-    if (!productRef.current?._id) {
-      console.error("No ID found in productRef");
+    if (!id) {
+      alert("ID not found in params!");
       return;
     }
-    router.push(`/home/${productRef.current._id}/edit`);
+
+    const foundProduct = products.find((prod) => prod._id === id);
+    if (foundProduct) {
+      setProduct(foundProduct);
+    } else {
+      alert("Product not found!");
+    }
+  }, [id, products]);
+
+  const handleEdit = () => {
+    if (!product?._id) {
+      alert("No product found to edit!");
+      return;
+    }
+    router.push(`/home/${product._id}/edit`);
   };
   
 

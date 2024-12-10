@@ -1,15 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
-import Upload from '@/assets/icons/upload.svg';
+import { useRouter } from "next/navigation";
+import Upload from "@/assets/icons/upload.svg";
 
-const EditProduct = () => {
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
-  const router = useRouter();
-
+const NewProduct = () => {
   const [formData, setFormData] = useState({
     image: "",
     name: "",
@@ -17,32 +13,14 @@ const EditProduct = () => {
     price: "",
     quantity: "",
   });
+  const router = useRouter();
 
-  useEffect(() => {
-    if (id) {
-
-      setFormData({
-        image: "https://example.com/default-image.jpg",
-        name: "Example Product Name",
-        description: "This is a sample product description.",
-        price: "3800",
-        quantity: "2"
-      });
-    }
-  }, [id]);
-
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [id.toLowerCase()]: value,
     }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Submitted Data:", formData);
-    router.push(`/home/${id}`);
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -59,15 +37,42 @@ const EditProduct = () => {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const buffer = Buffer.from(JSON.stringify(formData)).toString("base64");
+      const response = await fetch("/api/v1/product", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          buffer, 
+          action: "post",
+        }),
+      });
+  
+      if (response.ok) {
+        router.push("/home");
+      } else {
+        const errorData = await response.json();
+        console.error("Error adding product:", errorData.message);
+      }
+    } catch (error) {
+      console.error("Error during submission:", error);
+    }
+  };
+  
+
   return (
     <div className="mt-5 lg:mt-20 w-[500px]">
-      <p className="font-md">Edit Item</p>
+      <p className="font-md">Add Item</p>
 
       <div className="mt-5">
         <form onSubmit={handleSubmit} className="mt-4">
           <div className="mb-4">
             <label className="block font-xs-regular">Image</label>
-
             {formData.image && (
               <Image
                 src={formData.image}
@@ -77,7 +82,6 @@ const EditProduct = () => {
                 className="mb-3"
               />
             )}
-
             <input
               id="file-upload"
               type="file"
@@ -119,7 +123,7 @@ const EditProduct = () => {
             <input
               id="Quantity"
               type="text"
-              value={formData.price}
+              value={formData.quantity}
               onChange={handleInputChange}
               className="mt-1 p-2 border border-[#D9D9D9] w-full "
             />
@@ -143,4 +147,4 @@ const EditProduct = () => {
   );
 };
 
-export default EditProduct;
+export default NewProduct;

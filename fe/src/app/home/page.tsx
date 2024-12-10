@@ -4,6 +4,9 @@ import Banner from '../component/banner';
 import Sorter from '../component/sorter';
 import Search from '../component/search';
 import Products from '../component/products';
+import Add from '@/assets/icons/add.svg'
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface productType{
   _id: string;
@@ -16,6 +19,7 @@ interface productType{
 }
 
 const Home = () => {
+  const router = useRouter(); 
   const [result, setResult] = useState<productType[]>([]); 
   const [error, setError] = useState<string | undefined>(undefined); 
 
@@ -53,6 +57,10 @@ const Home = () => {
     fetchProductList();
   }, []);
 
+  const handleAdd = () => {
+    router.push("/new-product");
+  };
+
   return (
     <>
       <Banner/>
@@ -64,6 +72,12 @@ const Home = () => {
         <Sorter />
       </div>
       <Products data={result}/>
+      <button 
+          onClick={handleAdd}
+          className="fixed bottom-20 right-10 bg-[#FC541B] rounded-full p-4 shadow-lg hover:bg-[#FC541B] transition duration-300"
+        >
+          <Image src={Add} alt="Add" className="w-7 h-7 "/>
+        </button>
     </>
     
   );

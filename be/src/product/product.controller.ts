@@ -9,7 +9,12 @@ import {
   Param,
   Post,
   Put,
+  UploadedFile,
+  UseInterceptors,
 } from '@nestjs/common';
+import { FileInterceptor } from '@nestjs/platform-express';
+import { diskStorage } from 'multer';
+// import { join } from 'path';
 
 @Controller('product')
 export class ProductController {
@@ -18,6 +23,28 @@ export class ProductController {
   @Post()
   async create(@Body() createProductDto: CreateProductDTO): Promise<Product> {
     return this.productService.create(createProductDto);
+  }
+
+  @Post('upload')
+  @UseInterceptors(
+    FileInterceptor('file', {
+      storage: diskStorage({
+        destination: './uploads', // Directory where files will be stored
+        filename: (req, file, cb) => {
+          const uniqueSuffix =
+            Date.now() + '-' + Math.round(Math.random() * 1e9);
+          cb(null, `${uniqueSuffix}-${file.originalname}`);
+        },
+      }),
+    }),
+  )
+  async uploadImage(
+    @UploadedFile() file: Express.Multer.File,
+    @Body() createProductDto: CreateProductDTO,
+  ): Promise<Product> {
+    const imageUrl = `/uploads/${file.filename}`; // Construct URL for uploaded file
+    createProductDto.img = imageUrl; // Assign URL to DTO
+    return this.productService.create(createProductDto); // Save product with image URL
   }
 
   @Get()
