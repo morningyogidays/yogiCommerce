@@ -93,10 +93,10 @@ const NewProduct = () => {
 
             <label
               htmlFor="file-upload"
-              className="flex items-center border border-[#FC541B] p-4 gap-2 w-28 mt-5 cursor-pointer hover:bg-[#FC541B] transition-colors"
+              className="flex items-center border border-[#FC541B] p-4 gap-2 w-28 mt-5 cursor-pointer hover:rounded-xl"
             >
               <Image src={Upload} alt="Upload" className="w-4 h-4" />
-              <p className="font-xs-regular text-[#FC541B] hover:text-white">Upload</p>
+              <p className="font-xs-regular text-[#FC541B]">Upload</p>
             </label>
           </div>
 

@@ -794,6 +794,28 @@ body {
   }
 }
 
+.hover\:rounded-lg:hover {
+  border-radius: .5rem;
+}
+
+.hover\:rounded-xl:hover {
+  border-radius: .75rem;
+}
+
+.hover\:rounded-full:hover {
+  border-radius: 9999px;
+}
+
+.hover\:border-\[\#FC5419\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 84 25 / var(--tw-border-opacity, 1));
+}
+
+.hover\:border-\[\#FC541B\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 84 27 / var(--tw-border-opacity, 1));
+}
+
 .hover\:bg-\[\#FC541B\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(252 84 27 / var(--tw-bg-opacity, 1));
@@ -801,6 +823,11 @@ body {
 
 .hover\:bg-\[\#fc531b63\]:hover {
   background-color: #fc531b63;
+}
+
+.hover\:bg-\[\#FC5419\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 84 25 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-gray-300:hover {

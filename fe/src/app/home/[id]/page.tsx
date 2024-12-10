@@ -38,7 +38,7 @@ const DetailProduct:NextPage<Props> =  ()=> {
   ];
 
   useEffect(() => {
-    if (products && Array.isArray(products)) {
+    if (Array.isArray(products)) {
       const foundProduct = products.find((prod) => prod._id === id);
       if (foundProduct) {
         setProduct(foundProduct);
@@ -46,14 +46,14 @@ const DetailProduct:NextPage<Props> =  ()=> {
         console.error("Product not found");
       }
     }
-  }, [products, id]);
+  }, [id]);
 
   const handleEdit = () => {
-    if (!product?._id) {
+    if (!id) {
       alert("No product found to edit!");
       return;
     }
-    router.push(`/home/${product._id}/edit`);
+    router.push(`/home/${id}/edit`);
   };
   
 
@@ -91,7 +91,7 @@ const DetailProduct:NextPage<Props> =  ()=> {
           </p>
           <div 
             onClick={handleEdit}
-            className='flex border border-[#FC541B] p-4 gap-2 w-24 mt-5 hover:bg-[#fc531b63]'
+            className='flex border border-[#FC541B] p-4 gap-2 w-24 mt-5 hover:rounded-lg'
           >
             <Image src={Edit} alt="Edit" className="w-4 h-4" />
             <p className='font-xs-regular text-[#FC541B]'>Edit</p>

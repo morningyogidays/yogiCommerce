@@ -97,10 +97,10 @@ const EditProduct = ()=>{
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "font-md",
-                children: "Add/Edit Item"
+                children: "Edit Item"
             }, void 0, false, {
                 fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                lineNumber: 64,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -117,7 +117,7 @@ const EditProduct = ()=>{
                                     children: "Image"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 69,
+                                    lineNumber: 70,
                                     columnNumber: 13
                                 }, this),
                                 formData.image && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -139,12 +139,12 @@ const EditProduct = ()=>{
                                     className: "hidden"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 82,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                     htmlFor: "file-upload",
-                                    className: "flex items-center border border-[#FC541B] p-4 gap-2 w-28 mt-5 cursor-pointer hover:bg-[#FC541B] transition-colors",
+                                    className: "flex items-center border border-[#FC541B] p-4 gap-2 w-28 mt-5 cursor-pointer hover:rounded-xl",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             src: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$assets$2f$icons$2f$upload$2e$svg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$src$2f$assets$2f$icons$2f$upload$2e$svg__$5b$app$2d$ssr$5d$__$28$static$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object$2c$__ecmascript$29$__["default"],
@@ -152,27 +152,27 @@ const EditProduct = ()=>{
                                             className: "w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                            lineNumber: 96,
+                                            lineNumber: 94,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "font-xs-regular text-[#FC541B] hover:text-white",
+                                            className: "font-xs-regular text-[#FC541B]",
                                             children: "Upload"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                            lineNumber: 97,
+                                            lineNumber: 95,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 90,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                            lineNumber: 68,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -183,7 +183,7 @@ const EditProduct = ()=>{
                                     children: "Name"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 102,
+                                    lineNumber: 100,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -194,13 +194,13 @@ const EditProduct = ()=>{
                                     className: "mt-1 p-2 border border-[#D9D9D9] w-full "
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                            lineNumber: 101,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -211,7 +211,7 @@ const EditProduct = ()=>{
                                     children: "Description"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 110,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -221,13 +221,13 @@ const EditProduct = ()=>{
                                     className: "mt-1 p-2 border border-[#D9D9D9] w-full "
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 113,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                            lineNumber: 111,
+                            lineNumber: 109,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -238,7 +238,7 @@ const EditProduct = ()=>{
                                     children: "Quantity"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 121,
+                                    lineNumber: 119,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -249,13 +249,13 @@ const EditProduct = ()=>{
                                     className: "mt-1 p-2 border border-[#D9D9D9] w-full "
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 120,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                            lineNumber: 120,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -266,7 +266,7 @@ const EditProduct = ()=>{
                                     children: "Price"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 131,
+                                    lineNumber: 129,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -277,13 +277,13 @@ const EditProduct = ()=>{
                                     className: "mt-1 p-2 border border-[#D9D9D9] w-full "
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                            lineNumber: 130,
+                            lineNumber: 128,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -292,24 +292,24 @@ const EditProduct = ()=>{
                             children: "Save"
                         }, void 0, false, {
                             fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                            lineNumber: 140,
+                            lineNumber: 138,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                    lineNumber: 67,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-                lineNumber: 66,
+                lineNumber: 67,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/home/[id]/edit/page.tsx",
-        lineNumber: 63,
+        lineNumber: 64,
         columnNumber: 5
     }, this);
 };
