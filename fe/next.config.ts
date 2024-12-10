@@ -1,7 +1,9 @@
-module.exports = {
+import { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  webpack(config: { module: { rules: { test: RegExp; use: string[]; }[]; }; }) {
+  webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
@@ -9,6 +11,16 @@ module.exports = {
     return config;
   },
   experimental: {
-    turbopack: false,
+    // turbopack: false,
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:3000/api/:path*',
+      },
+    ];
   },
 };
+
+export default nextConfig;

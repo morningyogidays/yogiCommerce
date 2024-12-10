@@ -476,6 +476,10 @@ img, video {
   height: 40px;
 }
 
+.h-\[480px\] {
+  height: 480px;
+}
+
 .h-\[64px\] {
   height: 64px;
 }
@@ -625,6 +629,11 @@ img, video {
 .bg-\[\#FC541B\] {
   --tw-bg-opacity: 1;
   background-color: rgb(252 84 27 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gray-300 {

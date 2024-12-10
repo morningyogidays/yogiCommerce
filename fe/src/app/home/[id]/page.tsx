@@ -2,23 +2,40 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from "next/image";
-import Detail from '@/assets/images/detail1.svg';
 import Edit from '@/assets/icons/edit.svg';
+import { useEffect, useRef, useState } from 'react';
 
-const DetailProduct =  ({ params }: { params: { id: string } }) => {
-  const searchParams = useSearchParams();
-  const name = searchParams.get('name');
+interface productType {
+  _id: string;
+  name: string;
+  describe: string;
+  price: number;
+  quantity: number;
+  img: string;
+  __v: number;
+}
+
+const DetailProduct =  () => {
+  const [product, setProduct] = useState<productType | null>(null);
+  const productRef = useRef<productType | null>(null); 
   const router = useRouter();
-  const id = params.id; 
+
   
+  useEffect(() => {
+    if (productRef.current) {
+      setProduct(productRef.current); 
+    } else {
+      router.push("/"); 
+    }
+  }, [router]);
 
   const handleEdit = () => {
-    if (!id) {
-      console.error("No ID found in the URL");
+    if (!productRef.current?._id) {
+      console.error("No ID found in productRef");
       return;
     }
-    router.push(`/home/${id}/edit`);
-};
+    router.push(`/home/${productRef.current._id}/edit`);
+  };
   
 
   return (
@@ -29,17 +46,29 @@ const DetailProduct =  ({ params }: { params: { id: string } }) => {
             <a href="/" className=" hover:text-gray-300">Home</a>
           </li>
           <li>&gt;</li>
-          <li>{name}</li>
+          <li>{product?.name}</li>
         </ul>
       </nav>
 
       <div className='mt-2 grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[480px] md:max-w-max'>
-        <Image src={Detail} alt="product" width={480} height={480} className="object-cover" />
+        {product?.img ? (
+            <Image
+              src={product.img}
+              alt="product"
+              width={480}
+              height={480}
+              className="object-cover"
+            />
+          ) : (
+            <div className="w-full h-[480px] bg-gray-200 flex items-center justify-center">
+              <p>No Image</p>
+            </div>
+          )}
         <div className="max-w-full md:max-w-lg">
-          <p className='font-md mb-2'>{name}</p>
-          <p className='font-xl'>฿ 3,800</p>
+          <p className='font-md mb-2'>{product?.name}</p>
+          <p className='font-xl'>฿ {product?.price.toLocaleString()}</p>
           <p className='font-xs-regular mt-6 overflow-hidden text-ellipsis'> 
-            More than perhaps any other silhouette, the Air More Uptempo encapsulates '90s basketball flavour at its finest. Big and loud, the unapologetic design represents a hybrid of style and innovation that made major waves when it debuted—and still turns heads today. This crafted take keeps it simple and easy to style in classic black and white, while pops of blue add a breath of fresh air. Speaking of air, the graffiti-style AIR graphic (an off-court fave) extends down the midsole for extra punch. Visible Nike Air cushioning finishes it off, giving you the edge in comfort.
+            {product?.describe}
           </p>
           <div 
             onClick={handleEdit}
