@@ -1,6 +1,7 @@
 # yogiCommerce
 TODO 
 Backend
+cd be //first
 - Nest.js
   ```npm start```
 - Mongo DB
@@ -10,6 +11,7 @@ Backend
 ```
 
 Frontend
+cd fe //first
 - Next.js
 
 run server
