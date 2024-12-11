@@ -1,5 +1,4 @@
 # yogiCommerce
-TODO 
 Backend
 cd be //first
 - Nest.js
